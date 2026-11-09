@@ -1,0 +1,8 @@
+# Prometheus scrape config (for local observability)
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "factory-api"
+    static_configs:
+      - targets: ["factory-api:8000"]
